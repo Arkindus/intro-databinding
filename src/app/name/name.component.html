@@ -1,0 +1,22 @@
+<h3>UserProfile</h3>
+<form>
+  <input
+    type="text"
+    placeholder="Name"
+    (input)="userInput($event)">
+  <input type="text" [(ngModel)]="gender" name="gender">
+  <hr>
+  <button
+    class="btn btn-success"
+    type="submit"
+    [disabled]="!check"
+    (click)="onPressClicked()">
+      Press
+  </button>
+</form>
+
+<hr>
+<p [innerText]="name"></p>
+<p>{{ gender }}</p>
+<p>{{ hobby }}</p>
+<p>{{ age }}</p>
